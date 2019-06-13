@@ -62,6 +62,23 @@ public class junit_ex {
 	}
 	
 	/**
+	 * This map creates a list of animals with the countries they belong to. 
+	 * The countries will be the key. This will be used to illustrate 
+	 * AssertNotSame, which asserts that two objects do not refer to the 
+	 * same object. 
+	 */
+	public String animalCountries(final String key) {
+		Map<String, String> animalCountries = new HashMap<>();
+		animalCountries.put("Chile" , "Chilean Flamingo");
+		animalCountries.put("Argentina" , "Patagonian Cavy");
+		animalCountries.put("United States" , "Golden Eagle");
+		animalCountries.put("Australia" , "Kookaburra");
+		
+		return animalCountries.get(key);
+		
+	}
+	
+	/**
 	 * This is a hash map of some of my favorite books. I will use
 	 * The author as the key. This will illustrate the junit method
 	 * assertNull, which asserts that an object is null. 
@@ -81,7 +98,7 @@ public class junit_ex {
 	 * secondNum. This will be used to illustrate assertTrue, 
 	 * which asserts that a condition is true. 
 	 */
-	public boolean greater (int firstNum, int secondNum) {
+	public boolean greaterThan (int firstNum, int secondNum) {
 		if (firstNum > secondNum) {
 			return true;
 		}
